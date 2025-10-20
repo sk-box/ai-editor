@@ -225,6 +225,41 @@ model="gpt-4o-mini",  # → "gpt-4o" に変更でより高品質
 1. `survey_data_magazine.md` - 紙の雑誌購入調査
 2. `survey_data_autumn.md` - 「●●の秋」調査
 
+## 🌐 Streamlit Cloudへのデプロイ
+
+### デプロイ手順
+
+1. **GitHubリポジトリの準備**
+   - このリポジトリをフォークまたはクローン
+   - 必要なファイルが含まれていることを確認：
+     - `requirements.txt` または `pyproject.toml`
+     - `.streamlit/config.toml`
+
+2. **Streamlit Cloudでアプリを作成**
+   - [Streamlit Cloud](https://share.streamlit.io/) にアクセス
+   - 「New app」をクリック
+   - リポジトリを選択: `sk-box/ai-editor`
+   - ブランチ: `main`
+   - メインファイル: `app.py`
+
+3. **環境変数（Secrets）の設定**
+   - Streamlit Cloudのアプリ設定で「Settings」→「Secrets」を開く
+   - 以下の形式で追加：
+
+   ```toml
+   OPENAI_API_KEY = "your-openai-api-key-here"
+   ```
+
+4. **デプロイ**
+   - 「Deploy!」ボタンをクリック
+   - 数分でデプロイが完了し、URLが発行されます
+
+### デプロイ後の確認
+
+- アプリが正常に起動するか確認
+- 記事生成・評価・改善の各ページが動作するか確認
+- OpenAI APIキーが正しく設定されているか確認
+
 ## 🔧 トラブルシューティング
 
 ### APIキーエラー

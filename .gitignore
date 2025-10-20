@@ -31,7 +31,7 @@ wheels/
 .uv/
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
 
 # IDE
 .vscode/
