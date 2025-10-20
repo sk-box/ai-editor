@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__chrome-devtools__list_pages",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_snapshot",
+      "Bash(uv sync)",
+      "Bash(uv pip install streamlit openai python-dotenv)",
+      "Bash(test -f /c/Users/owner/Desktop/wakamono/.env)",
+      "Bash(streamlit run app.py --server.headless=true --server.port=8501)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
